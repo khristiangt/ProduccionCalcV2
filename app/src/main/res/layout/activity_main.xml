@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Maquina 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_vel"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="56dp"
+        android:text="Velocidad KO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_anillos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="#Anillos"
+        app:layout_constraintStart_toStartOf="@+id/textView_vel"
+        app:layout_constraintTop_toBottomOf="@+id/textView_vel" />
+
+    <TextView
+        android:id="@+id/textView_tiempo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Tiempo (min)"
+        app:layout_constraintStart_toStartOf="@+id/textView_anillos"
+        app:layout_constraintTop_toBottomOf="@+id/textView_anillos" />
+
+    <TextView
+        android:id="@+id/textView_eficiencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="% Eficiencia "
+        app:layout_constraintStart_toStartOf="@+id/textView_tiempo"
+        app:layout_constraintTop_toBottomOf="@+id/textView_tiempo" />
+
+    <TextView
+        android:id="@+id/textView_piezas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="# Piezas"
+        app:layout_constraintStart_toStartOf="@+id/textView_eficiencia"
+        app:layout_constraintTop_toBottomOf="@+id/textView_eficiencia" />
+
+    <TextView
+        android:id="@+id/textView_paquetes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Paquetes"
+        app:layout_constraintStart_toStartOf="@+id/button_P1"
+        app:layout_constraintTop_toBottomOf="@+id/button_P1" />
+
+    <TextView
+        android:id="@+id/textView_tarimas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="#Tarimas"
+        app:layout_constraintStart_toStartOf="@+id/textView_paquetes"
+        app:layout_constraintTop_toBottomOf="@+id/textView_paquetes" />
+
+    <Button
+        android:id="@+id/button_P1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:text="Calcular P1"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_paquetesTarima" />
+
+    <EditText
+        android:id="@+id/editText_vel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Velocidad"
+        android:inputType="number"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_vel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintStart_toEndOf="@+id/textView_vel" />
+
+    <EditText
+        android:id="@+id/editText_anillos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Numero de Anillos"
+        android:inputType="number"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_anillos"
+        app:layout_constraintStart_toStartOf="@+id/editText_vel" />
+
+    <EditText
+        android:id="@+id/editText_eficiencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Eficiencia "
+        android:inputType="numberDecimal"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_eficiencia"
+        app:layout_constraintStart_toStartOf="@+id/editText_tiempo" />
+
+    <EditText
+        android:id="@+id/editText_piezas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Piezas por paquete"
+        android:inputType="number"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_piezas"
+        app:layout_constraintStart_toStartOf="@+id/editText_eficiencia" />
+
+    <EditText
+        android:id="@+id/editText_tiempo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Tiempo "
+        android:inputType="number"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/editText_anillos"
+        app:layout_constraintTop_toBottomOf="@+id/editText_anillos" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="#Paquetes"
+        app:layout_constraintStart_toStartOf="@+id/textView_piezas"
+        app:layout_constraintTop_toBottomOf="@+id/textView_piezas" />
+
+    <EditText
+        android:id="@+id/editText_paquetesTarima"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Paquetes por tarima"
+        android:inputType="number"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="@+id/editText_piezas" />
+
+</android.support.constraint.ConstraintLayout>
